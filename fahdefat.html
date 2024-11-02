@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم عظمة متفاعلة</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            overflow: hidden;
+        }
+
+        .bone {
+            font-size: 120px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            color: #e0e0e0;
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.2));
+            text-decoration: none;
+        }
+
+        .bone:hover {
+            transform: scale(1.2) rotate(-10deg);
+            color: #d4af37;
+            filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.4));
+        }
+
+        .bone:active {
+            transform: scale(0.9) rotate(10deg);
+            color: #f4a261;
+        }
+
+        /* حركة ناعمة تظهر وتختفي بشكل رائع */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .bone {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScV_aowNCttg1IARMm6jVA3Kqzpm2ivqLYk5Dk-DXaWYtHLxQ/viewform?usp=sf_link" class="bone">🦴</a>
+</body>
+</html>
